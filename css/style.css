@@ -1,0 +1,259 @@
+/* RESET */
+@import url("../css/reset.css");
+
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* GENERAL */
+*,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	box-sizing: border-box;
+}
+:root {
+	--border: 1px solid #dbdbdb;
+	--text-color: #262626;
+	--text-link-color: #4a95f6;
+	--footer-link-color: #00376b;
+	--white: #fff;
+	--blue: #385185;
+	--blue-light: #b2dffc;
+	--blue-dark: #00376b;
+	--gray: #bbb;
+	--gray-dark: #8e8e8e;
+}
+
+/* CONTAINER */
+.container {
+	max-width: 900px;
+	margin: 50px auto;
+}
+
+/* HEADER */
+header {
+	display: block;
+}
+header h1 {
+	display: none;
+}
+
+/* CONTENT */
+.content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 50px;
+}
+
+/* ASIDE */
+aside {
+	width: 450px;
+	height: 615px;
+	position: relative;
+}
+aside img {
+	width: auto;
+	height: auto;
+	display: block;
+}
+aside .imgexternal {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+aside .imginternal {
+	position: absolute;
+	left: 151px;
+	top: 100px;
+}
+
+/* MAIN */
+main {
+	display: block;
+	width: 350px;
+}
+
+/* SIGNIN */
+main .signin {
+	border: var(--border);
+	width: 100%;
+	padding: 0 40px;
+	margin: 30px 0 0;
+}
+main .signin .logo {
+	width: 100%;
+}
+main .signin .logo img {
+	width: 175px;
+	margin: 30px auto;
+	display: block;
+}
+main .signin form input {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 8px;
+	border: var(--border);
+	border-radius: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+main .signin form button {
+	display: block;
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--white);
+	background-color: var(--blue-light);
+	border: var(--blue-light);
+	margin-top: 15px;
+}
+main .signin .line {
+	display: block;
+	width: 100%;
+	border-bottom: var(--border);
+	height: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+main .signin .line .or {
+	margin-top: 16px;
+	display: inline-block;
+	background-color: var(--white);
+	width: 50px;
+	font-size: 14px;
+	color: var(--gray);
+}
+main .signin .buttons {
+	text-align: center;
+}
+main .signin a {
+	margin: 10px 0;
+	text-decoration: none;
+	display: block;
+}
+main .signin a.facebook {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--blue);
+}
+main .signin a.facebook:before {
+	display: block;
+	margin-bottom: 2px;
+	margin-right: 8px;
+	content: "";
+	width: 18px;
+	height: 18px;
+	background-image: url("../img/logo_facebook.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+main .signin a.forgotpassword {
+	font-size: 14px;
+	color: var(--blue);
+	margin-bottom: 20px;
+}
+
+/* SIGNUP */
+main .signup {
+	text-align: center;
+	font-size: 14px;
+	width: 100%;
+	display: block;
+	padding: 20px;
+	margin: 10px 0;
+	border: var(--border);
+}
+main .signup .link {
+	font-weight: bold;
+	color: var(--text-link-color);
+	text-decoration: none;
+}
+
+/* GETAPP */
+main .getapp {
+	text-align: center;
+}
+main .getapp .title {
+	padding: 10px 0 15px;
+	font-size: 14px;
+}
+main .getapp a {
+	display: inline-block;
+}
+main .getapp img {
+	width: 135px;
+	display: block;
+}
+
+/* FOOTER */
+footer .links {
+	list-style: none;
+}
+footer .links li {
+	display: inline-block;
+	padding-right: 10px;
+}
+footer .links li:last-child {
+	padding-right: 0;
+}
+footer .links li a {
+	color: var(--blue-dark);
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+footer .copyright {
+	padding-top: 10px;
+	color: var(--gray-dark);
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+	.container {
+		margin-top: 0;
+	}
+	.content {
+		margin-bottom: 30px;
+	}
+	aside {
+		display: none;
+	}
+	main {
+		width: 100%;
+	}
+	main .signin {
+		border: 0;
+	}
+	main .signup {
+		border: 0;
+	}
+	footer {
+		width: 100%;
+		padding: 0 30px;
+	}
+	footer .links {
+		text-align: center;
+	}
+	footer .copyright {
+		text-align: center;
+	}
+}
